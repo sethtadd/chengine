@@ -1,0 +1,2 @@
+# chengine
+Minimax chess engine
