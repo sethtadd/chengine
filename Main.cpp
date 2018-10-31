@@ -95,7 +95,6 @@ void getPlayerMove(int &_x1, int &_y1, int &_x2, int &_y2)
     std::string move2;
     std::cout << "Move From\n>";
     std::getline(std::cin, move1);
-//     std::cout << (int)move1[0] - 65 << '\n';
     _x1 = (int)move1[0] - 'A';
     _y1 = (int)move1[1] - '0'-1;
     std::cout << "Move To\n>";
