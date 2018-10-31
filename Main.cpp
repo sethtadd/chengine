@@ -50,8 +50,7 @@ int main()
         return 1;
     }
     
-    st.genLevels(4);
-//     st.genLevels(levels);
+    st.genLevels(levels);
     
     st.printCurrent();
     
