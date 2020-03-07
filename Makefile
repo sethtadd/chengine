@@ -13,9 +13,24 @@ OBJ  = Main.o StateTree.o
 # system specifics
 #
 
-CFLAGS = -std=c++14 -Ofast -Wall
-LIBS   = 
-CLEAN  = rm -v $(EXE) *.o
+# Linux
+ifeq ($(OS),Windows_NT)
+	CFLAGS = -std=c++14 -Ofast -Wall
+	LIBS   = 
+	CLEAN  = rm -v $(EXE) *.o
+endif
+# windows
+ifeq ($(OS),Windows_NT)
+	CFLAGS = -std=c++14 -Ofast -Wall
+	LIBS   = 
+	CLEAN  = del $(EXE).exe *.o
+endif
+# MacOS
+ifeq ($(OS),Darwin)
+	CFLAGS = -std=c++14 -Ofast -Wall
+	LIBS   = 
+	CLEAN  = rm -v $(EXE) *.o
+endif
 
 #
 # rules
