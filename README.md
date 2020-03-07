@@ -10,3 +10,4 @@ TODO:
  - Make the evaluation function more sophisticated!
  - Make a branch of this repo which uses a Monte Carlo search tree instead and implement a neural network
  - Make it so that king can't castle over checked squares! He has the potential to do that as of now
+ - Prevent user input from crashing the program, make sure user-input is well-formatted and allow lower-case input
