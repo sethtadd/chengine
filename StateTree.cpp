@@ -85,7 +85,7 @@ void StateTree::regenDeepestLevel(GameState* _gs)
 {
     if ((int)_gs->nextLevel.size() != 0)
     {
-        for (int i = 0; i < _gs->nextLevel.size(); i++)
+        for (int i = 0; i < (int)_gs->nextLevel.size(); i++)
         {
             GameState* _childGS = _gs->nextLevel[i].get();
             regenDeepestLevel(_childGS);
@@ -325,7 +325,7 @@ bool StateTree::pushPlayerState(int _x1, int _y1, int _x2, int _y2)
 {
     if (_x1 < 0 || _x1 > 7 || _y1 < 0 || _y1 > 7)
     {
-        std::cout << "Jesus fuck... learn to play the game\n";
+        std::cout << "Are you trying to break the rules? Try again\n";
         return false;
     }
     
@@ -338,7 +338,7 @@ bool StateTree::pushPlayerState(int _x1, int _y1, int _x2, int _y2)
         || (!currentState->whiteTurn && (int)currentState->board[_x1][_y1] < COLOR_THRESHOLD)
     )
     {
-        std::cout << "Opponent tried to do something stupid.. Try again\n";
+        std::cout << "Opponent tried to do something silly... Try again\n";
         return false;
     }
     
