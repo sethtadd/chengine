@@ -1,2 +1,5 @@
+# ignore all object files
+*.o
+
 # ignore all executables
 *.exe
