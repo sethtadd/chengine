@@ -19,7 +19,7 @@ ifeq ($(OS),Windows_NT)
 	LIBS   = 
 	CLEAN  = rm -v $(EXE) *.o
 endif
-# windows
+# Windows
 ifeq ($(OS),Windows_NT)
 	CFLAGS = -std=c++14 -Ofast -Wall
 	LIBS   = 
